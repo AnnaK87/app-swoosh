@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		670142A62192049500075ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670142A52192049500075ACE /* AppDelegate.swift */; };
-		670142A82192049500075ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670142A72192049500075ACE /* ViewController.swift */; };
+		670142A82192049500075ACE /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670142A72192049500075ACE /* WelcomeVC.swift */; };
 		670142AB2192049500075ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670142A92192049500075ACE /* Main.storyboard */; };
 		670142AD2192049600075ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670142AC2192049600075ACE /* Assets.xcassets */; };
 		670142B02192049600075ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670142AE2192049600075ACE /* LaunchScreen.storyboard */; };
 		670142B9219210AA00075ACE /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670142B8219210AA00075ACE /* BorderButton.swift */; };
+		67C0A75621A0290D00BB98BC /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C0A75521A0290D00BB98BC /* LeagueVC.swift */; };
+		67C0A75821A0291D00BB98BC /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C0A75721A0291D00BB98BC /* SkillVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		670142A22192049500075ACE /* app-swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-swoosh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		670142A52192049500075ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		670142A72192049500075ACE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		670142A72192049500075ACE /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		670142AA2192049500075ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		670142AC2192049600075ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670142AF2192049600075ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		670142B12192049600075ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670142B8219210AA00075ACE /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		67C0A75521A0290D00BB98BC /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
+		67C0A75721A0291D00BB98BC /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		670142A42192049500075ACE /* app-swoosh */ = {
 			isa = PBXGroup;
 			children = (
-				670142B72192107E00075ACE /* Views */,
+				67C0A75321A0282B00BB98BC /* Model */,
+				67C0A75421A0285D00BB98BC /* Controller */,
+				670142B72192107E00075ACE /* View */,
 				670142A52192049500075ACE /* AppDelegate.swift */,
-				670142A72192049500075ACE /* ViewController.swift */,
 				670142A92192049500075ACE /* Main.storyboard */,
 				670142AC2192049600075ACE /* Assets.xcassets */,
 				670142AE2192049600075ACE /* LaunchScreen.storyboard */,
@@ -67,12 +72,29 @@
 			path = "app-swoosh";
 			sourceTree = "<group>";
 		};
-		670142B72192107E00075ACE /* Views */ = {
+		670142B72192107E00075ACE /* View */ = {
 			isa = PBXGroup;
 			children = (
 				670142B8219210AA00075ACE /* BorderButton.swift */,
 			);
-			name = Views;
+			name = View;
+			sourceTree = "<group>";
+		};
+		67C0A75321A0282B00BB98BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		67C0A75421A0285D00BB98BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				670142A72192049500075ACE /* WelcomeVC.swift */,
+				67C0A75521A0290D00BB98BC /* LeagueVC.swift */,
+				67C0A75721A0291D00BB98BC /* SkillVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				670142A82192049500075ACE /* ViewController.swift in Sources */,
+				670142A82192049500075ACE /* WelcomeVC.swift in Sources */,
+				67C0A75621A0290D00BB98BC /* LeagueVC.swift in Sources */,
 				670142A62192049500075ACE /* AppDelegate.swift in Sources */,
+				67C0A75821A0291D00BB98BC /* SkillVC.swift in Sources */,
 				670142B9219210AA00075ACE /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

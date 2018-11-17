@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tR4-B4-Pdc" kind="show" id="tz1-Cd-m0E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3e-iM-r8I">
                                 <rect key="frame" x="53.333333333333343" y="231" width="268.33333333333326" height="70"/>
@@ -86,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="uqF-9A-Hiq">
             <objects>
-                <viewController id="tR4-B4-Pdc" sceneMemberID="viewController">
+                <viewController id="tR4-B4-Pdc" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljk-3G-Rbi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +124,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextBtnPressed:" destination="tR4-B4-Pdc" eventType="touchUpInside" id="3cY-hx-2hC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ctC-lK-e2p">
                                 <rect key="frame" x="25" y="234" width="325" height="200"/>
@@ -145,7 +151,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="w5J-Lg-fxQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
-                                        <state key="normal" title="Wo,ens">
+                                        <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
@@ -163,15 +169,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm4-WS-ieR">
+                                <rect key="frame" x="16" y="54" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="6Hh-VW-sGE"/>
+                                    <constraint firstAttribute="height" constant="24" id="QZI-yR-Q3T"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="B98-jR-WoE" kind="unwind" unwindAction="unwinfSegueFromSkillVCWithSegue:" id="MHi-v6-4kE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nWm-c9-cuh" firstAttribute="leading" secondItem="49R-0W-Lwj" secondAttribute="leading" constant="25" id="12l-sz-Ztr"/>
                             <constraint firstItem="49R-0W-Lwj" firstAttribute="leading" secondItem="MJJ-zt-lfK" secondAttribute="leading" id="4P7-AB-ryJ"/>
+                            <constraint firstItem="zm4-WS-ieR" firstAttribute="leading" secondItem="49R-0W-Lwj" secondAttribute="leading" constant="16" id="8tK-bT-hB9"/>
                             <constraint firstItem="MJJ-zt-lfK" firstAttribute="top" secondItem="ljk-3G-Rbi" secondAttribute="topMargin" constant="-44" id="9cc-8T-R8M"/>
                             <constraint firstItem="49R-0W-Lwj" firstAttribute="trailing" secondItem="nWm-c9-cuh" secondAttribute="trailing" constant="25" id="EQm-sx-x5a"/>
                             <constraint firstAttribute="bottomMargin" secondItem="MJJ-zt-lfK" secondAttribute="bottom" constant="-34" id="Ej6-JV-LvG"/>
                             <constraint firstItem="49R-0W-Lwj" firstAttribute="trailing" secondItem="enB-Xt-JbA" secondAttribute="trailing" id="OVD-jc-shd"/>
+                            <constraint firstItem="zm4-WS-ieR" firstAttribute="top" secondItem="49R-0W-Lwj" secondAttribute="top" constant="10" id="XiR-Q4-NP5"/>
                             <constraint firstItem="ctC-lK-e2p" firstAttribute="top" secondItem="enB-Xt-JbA" secondAttribute="bottom" constant="84" id="a2b-iU-HNl"/>
                             <constraint firstItem="ctC-lK-e2p" firstAttribute="leading" secondItem="49R-0W-Lwj" secondAttribute="leading" constant="25" id="hsY-jJ-NMP"/>
                             <constraint firstItem="49R-0W-Lwj" firstAttribute="trailing" secondItem="ctC-lK-e2p" secondAttribute="trailing" constant="25" id="iM8-fM-aEF"/>
@@ -182,15 +201,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="49R-0W-Lwj"/>
                     </view>
+                    <connections>
+                        <segue destination="aKT-8W-GVg" kind="show" identifier="skillVCSegue" id="Rig-wc-qk2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXs-Wb-tz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B98-jR-WoE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="131.52709359605913"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Wzc-kU-cgs">
             <objects>
-                <viewController id="aKT-8W-GVg" sceneMemberID="viewController">
+                <viewController id="aKT-8W-GVg" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulc-PG-Q4z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,10 +300,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yk-Bh-ROM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486.6995073891626" y="132"/>
+            <point key="canvasLocation" x="1631" y="132"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
