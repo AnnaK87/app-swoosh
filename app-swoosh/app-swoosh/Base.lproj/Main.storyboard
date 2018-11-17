@@ -283,6 +283,16 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Womens" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN0-ny-LOh">
+                                <rect key="frame" x="125" y="311" width="125" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="m8o-rP-11n"/>
+                                    <constraint firstAttribute="height" constant="31" id="yUv-PR-VtA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -292,6 +302,8 @@
                             <constraint firstItem="vaY-g9-mfd" firstAttribute="trailing" secondItem="fpa-CA-lDc" secondAttribute="trailing" constant="25" id="BXn-US-KNF"/>
                             <constraint firstItem="Atz-yv-nOl" firstAttribute="top" secondItem="ulc-PG-Q4z" secondAttribute="top" id="CQG-wf-iSW"/>
                             <constraint firstAttribute="trailing" secondItem="Atz-yv-nOl" secondAttribute="trailing" id="Ghc-ok-2KF"/>
+                            <constraint firstItem="fN0-ny-LOh" firstAttribute="top" secondItem="KG0-E9-ckH" secondAttribute="bottom" constant="32.666666666666629" id="TRS-AI-dIW"/>
+                            <constraint firstItem="fN0-ny-LOh" firstAttribute="centerX" secondItem="ulc-PG-Q4z" secondAttribute="centerX" id="aUZ-Qh-cZr"/>
                             <constraint firstItem="fEi-Zn-jo9" firstAttribute="top" secondItem="ulc-PG-Q4z" secondAttribute="topMargin" constant="20" id="dyh-Uk-TRY"/>
                             <constraint firstItem="KG0-E9-ckH" firstAttribute="leading" secondItem="vaY-g9-mfd" secondAttribute="leading" constant="25" id="eaF-Yb-84b"/>
                             <constraint firstItem="vaY-g9-mfd" firstAttribute="trailing" secondItem="fEi-Zn-jo9" secondAttribute="trailing" id="gZU-yt-ssx"/>
@@ -307,10 +319,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="chosenLeagueLbl" destination="fN0-ny-LOh" id="tlO-39-iAN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yk-Bh-ROM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="132"/>
+            <point key="canvasLocation" x="1629.5999999999999" y="131.52709359605913"/>
         </scene>
     </scenes>
     <resources>

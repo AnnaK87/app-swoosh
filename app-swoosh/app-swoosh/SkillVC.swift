@@ -10,9 +10,13 @@ import UIKit
 
 class SkillVC: UIViewController {
 
+    var player: Player!
+    
+    @IBOutlet weak var chosenLeagueLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+      chosenLeagueLbl.text = player.desiredLeague?.capitalized
     }
 }
