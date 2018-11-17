@@ -10,13 +10,36 @@ import UIKit
 
 class LeagueVC: UIViewController {
 
+    var player: Player!
+    
+    @IBOutlet weak var nextBtn: BorderButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        player = Player()
     }
+    
+    @IBAction func onMensBtnPressed(_ sender: Any) {
+        selectLaegue(leagueType: "mens")
+    }
+    
+    @IBAction func onWomenBtnPressed(_ sender: Any) {
+        selectLaegue(leagueType: "womens")
+    }
+    @IBAction func onCoedBtnPressed(_ sender: Any) {
+        selectLaegue(leagueType: "coed")
+    }
+    
+    func selectLaegue(leagueType: String) {
+        player.desiredLeague = leagueType
+        nextBtn.isEnabled = true
+    }
+    
     @IBAction func onNextBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "skillVCSegue", sender: self)
     }
+    
     
 }
